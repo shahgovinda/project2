@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalkNow</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <section class="chat__section">
+        <div class="brand">
+            <img height="40" src="./tkimage.png" alt="">
+            <h1>TalkNow</h1>
+        </div>
+
+        <div class="message__area"></div>
+        
+        <div class="input-container">
+            <textarea id="textarea" cols="30" rows="1" placeholder="Write a message..."></textarea>
+            <button id="speechButton">Speak</button>
+           
+            <button id="sendButton">Send</button>
+        </div>
+    </section>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/client.js"></script>
+
+    <!-- Add this code to your HTML to request permission for notifications -->
+    <script>
+        if ('Notification' in window) {
+            Notification.requestPermission().then((permission) => {
+                if (permission === 'granted') {
+                    console.log('Notification permission granted');
+                }
+            });
+        }
+    </script>
+
+    <!-- Include the necessary JavaScript libraries and scripts here -->
+    <script>
+        // Wait for the document to be fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get a reference to the speech button and textarea
+            const speechButton = document.querySelector('#speechButton');
+            const textarea = document.querySelector('#textarea');
+
+            // Check if the browser supports the SpeechRecognition API
+            if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
+                // Create a new SpeechRecognition instance
+                const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+
+                // Configure the recognition settings
+                recognition.lang = 'en-US'; // Set the language to English (you can change this)
+                recognition.continuous = false; // Recognize speech only once
+                recognition.interimResults = false; // Use final results only
+
+                // Add an event listener to the speech button
+                speechButton.addEventListener('click', () => {
+                    // Start speech recognition when the button is clicked
+                    recognition.start();
+                });
+
+                // Add an event listener for the result event
+                recognition.addEventListener('result', (event) => {
+                    // Get the recognized text from the result
+                    const transcript = event.results[0][0].transcript;
+
+                    // Append the recognized text to the textarea
+                    textarea.value = transcript;
+                });
+
+                // Add an event listener for the end event
+                recognition.addEventListener('end', () => {
+                    // Stop recognition when it's done
+                    recognition.stop();
+                });
+            } else {
+                // SpeechRecognition is not supported, so hide or disable the speech button
+                speechButton.style.display = 'none';
+                // Optionally provide a message to the user about unsupported speech recognition
+            }
+        });
+    </script>
+     <script src="/socket.io/socket.io.js"></script>
+     <script src="/client.js"></script>
+ 
+     <!-- Add this code to your HTML to request permission for notifications -->
+     <script>
+         if ('Notification' in window) {
+             Notification.requestPermission().then((permission) => {
+                 if (permission === 'granted') {
+                     console.log('Notification permission granted');
+                 }
+             });
+         }
+     </script>
+ </body>
+ </html>
+ 
+</body>
+
+</html>
