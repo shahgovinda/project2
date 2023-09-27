@@ -19,18 +19,10 @@ app.get('/', (req, res) => {
 const io = require('socket.io')(http)
 io.on('connection', (socket) => {
 
-
-
-
      // give the actual name in the  terminal ...e.g govinda
     const username = socket.handshake.query.username;
     console.log(`${username} is connected`);
 
-
-
-
-
-    
     socket.on('message', (msg) => {
         socket.broadcast.emit('message', msg)
     })

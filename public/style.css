@@ -12,25 +12,30 @@ body {
     min-height: 100vh;
     background: #F8F8F8;
     font-family: 'Roboto', sans-serif;
+    border: #ffffff; 
+    
 }
 /*  main chatting area background color */
 section.chat__section {
     width: 1000px;
     max-width: 90%;
     background: #cfd7dd;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    border: 1px solid #000000;
-    /*background-image: url(bluecircle.png);*/
+    box-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.1), 0 4px 6px -2px rgba(255, 255, 255, 0.05);
+    border: #ffffff; 
+    background-image: url(chatbg2.png);
+    background-size: cover;
+    
     background-repeat: no-repeat;
-    background-size: 200px 200px; /* Adjust the size as needed */
+    
     background-position: center center;
 }
 /* talk now heading background color*/
 .brand {
     padding: 20px;
-    background: #f1a414; 
+    background: #29c5a6; 
     display: flex;
     align-items: center;
+    border: #000000; 
 }
 /* talk now heading color */
 .brand h1 {
@@ -38,7 +43,6 @@ section.chat__section {
     font-size: 20px;
     color: #ffffff;
     margin-left: 10px;
-   
 }
 
 .message {
@@ -48,12 +52,14 @@ section.chat__section {
     max-width: 300px;
     position: relative;
 }
+
 .incoming {
     background: #ffffff;
     color: #000000;  
+    
 }
 .outgoing {
-    background-color: #278bdd;
+    background-color: #29c5a6; 
     color: #ffffff;
     margin-left: auto;
 }
@@ -91,7 +97,7 @@ section.chat__section {
 
 /* Style the "Send" button */
 button#sendButton {
-    background-color: #e4800d;/* Background color when not hovered */
+    background-color: #29c5a6;/* Background color when not hovered */
     color: #fff;
     border: #000000;
     padding: 10px 20px;
@@ -103,7 +109,7 @@ button#sendButton {
 
 /* Change background color and add a slight scale effect when hovered */
 button#sendButton:hover {
-    background-color: #0b78dd; /* Background color on hover */
+    background-color: #29c5a6; /* Background color on hover */
     transform: scale(1.05);
 }
 
@@ -121,7 +127,7 @@ button#sendButton:hover {
 }
 
 
-/* Style the message input container ....write a message ke niche wala box */
+/* Style the message input container ....write a message ke niche wala box 
 .message-input {
     display: flex;
     align-items: center;
@@ -130,7 +136,7 @@ button#sendButton:hover {
     padding: 8px;
     background-color: #31e61a;
     border-radius: 4px;
-}
+}*/
 
 /* Style the Write A Message textarea */
 
@@ -140,26 +146,11 @@ button#sendButton:hover {
     padding: 10px;
     font-size: 16px;
     outline: none;
-    background: #49e453;
+    background: #29c5a6; 
     border-radius: 5px;
     resize: none; /* Prevent textarea resizing */
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-/* Style send photo buttons */
-#sendPhotoButton {
-    background-color: #ff7b00;
-    color: #fff;
-    border: #000000;
-    padding: 8px 12px;
-    cursor: pointer;
-    margin-right: 10px; /* Add some spacing between buttons */
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.2s ease-in-out;
-}
-
-button#sendPhotoButton:hover {
-    background-color: #0b78dd; /* Background color on hover */
-    transform: scale(1.05);
+    
 }
 
 .message h4 {
@@ -177,13 +168,6 @@ button#sendPhotoButton:hover {
     padding-top: 40px;
     overflow-x: auto; /* Add this line */
 }
-
-
-
-
-
-
-
 /* Default styles for larger screens */
 .message__area {
     max-height: 350px;
@@ -255,33 +239,21 @@ button#sendPhotoButton:hover {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
 /* background image */
 body {
     background-image: url('./star.jpg');
     background-size: cover; /* Scale and cover the entire background */
     background-repeat: no-repeat;
     background-attachment: fixed; /* Fixed background */
+    
 }
 
-
-
 button {
-    padding: 10px 20px;
+    padding: none;
     font-size: 15px;
-    background-color: #ff9900;
     color: white;
-    border: none;
-    margin-right: 10px; /* Add some spacing between buttons */
+    border: black;
+    margin-right: 5px; /* Add some spacing between buttons */
     cursor: pointer;
     border-radius: 5px;
 }
@@ -290,19 +262,19 @@ button {
 /* Style for the timestamp */
 .timestamp {
     font-size: 12px;
-    color: #ffffff; /* White text color */
+    color: #000000; /* White text color */
     margin-left: 10px;
     display: inline-block;
     padding: 4px 8px;
     border-radius: 20px; /* Rounded shape */
-    background-color: #8b9296; /* Blue background color */
+    /*background-color: #8b9296;  Blue background color */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 /* Add a hover effect */
 .timestamp:hover {
-    background-color: #e9b714; /* Darker blue on hover */
+    /*background-color: #e9b714;  Darker blue on hover */
     transform: scale(1.05); /* Slight scaling effect on hover */
 }
 
@@ -313,7 +285,7 @@ button {
 /* Style for the timestamp */
 #timestamp {
     font-size: 12px;
-    color: #999; /* Customize the color as needed */
+   /* color: #999;  */
     margin-left: 5px; /* Adjust the spacing as needed */
 }
 
@@ -333,34 +305,39 @@ button {
     animation: fadeIn 0.5s ease-out;
     /* Other message styling */
   }
-
-
-
-
-
-
-
-
-
-
-
 /* CSS for the "Speak" button */
 #speechButton {
-    background-color: #ff7b00;/* Button background color */
-    color: #fff;/* Text color */
-    padding: 8px 12px; /* Padding around text */
-    border: #000000; /* Remove button border */
-    font-size: 16;
-    border-radius: 5px; /* Add rounded corners */
-    cursor: pointer; /* Add pointer cursor on hover */
-    margin-right: 10px; /* Add some spacing between buttons */
+    background-color: #29c5a6; 
+    color: #fff;
+    padding: 10px 14px;
+    border: none;
+    font-size: 16px;
+  /*  border-radius: 50%;*/
+    cursor: pointer;
+   /* margin-right: 10px;*/
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.2s ease-in-out;
-    margin: 0;
 }
 
 #speechButton:hover {
-    background-color: #0b78dd; /* Background color on hover */
+    background-color: #29c5a6; 
     transform: scale(1.05);
+    animation: pulse 1s infinite; /* Add the pulse animation */
+}
+
+/* Define the pulse animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
 }
 
 
@@ -368,28 +345,5 @@ button {
 
 
 
-/* Style for the edit and delete buttons */
-.message-actions {
-    display: flex;
-    align-items: center;
-    margin-top: 5px;
-}
-
-.edit-button,
-.delete-button {
-    padding: 5px 10px;
-    margin-right: 5px;
-    border: none;
-    cursor: pointer;
-    background-color: #e4800d;
-    color: white;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-.edit-button:hover,
-.delete-button:hover {
-    background-color: #0b78dd;
-}
 
 

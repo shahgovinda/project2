@@ -8,7 +8,7 @@ let messageArea = document.querySelector('.message__area')
 function promptForName() {
     do {
         name = prompt('Enter Your Name (between 5 and 14 characters): ');
-    } while (!name || name.length < 5 || name.length > 14);
+    } while (!name || name.length < 4 || name.length > 14);
     
     
 
@@ -110,7 +110,7 @@ function appendMessage(msg, type) {
 
 
      // Format the timestamp as "day, month day, year, hour:minute AM/PM" (e.g., "Monday, September 12, 2023, 3:45 PM")
-     let timeOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: true };
+     let timeOptions = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: true };
      let timeString = now.toLocaleDateString(undefined, timeOptions);
 
 
@@ -139,12 +139,6 @@ function appendMessage(msg, type) {
     // Scroll to the bottom of the message area
     scrollToBottom();
 }
-
-
-
-
-
-
 
 
 // Function to append a new message with animation
@@ -176,19 +170,3 @@ function scrollToBottom() {
 // For example, when you receive a message from the server:
 
 appendMessageWithAnimation(newMessage, 'incoming');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

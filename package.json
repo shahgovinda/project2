@@ -22,5 +22,13 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahgovinda/holatalk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shahgovinda/holatalk/issues"
+  },
+  "homepage": "https://github.com/shahgovinda/holatalk#readme"
 }
